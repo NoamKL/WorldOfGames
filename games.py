@@ -1,4 +1,4 @@
-#!/usr/bin python3
+#!/usr/bin/python3
 
 from random import randint
 from time import sleep
