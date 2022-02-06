@@ -1,6 +1,7 @@
 #!/usr/bin python3
 
 from utils import SCORES_FILE_NAME
+import main_scores
 
 
 def add_score(difficulty):

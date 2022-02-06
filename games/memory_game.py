@@ -1,17 +1,20 @@
 #!/usr/bin/python3
 
 from time import sleep
+from random import randint
 import click
-
-from guess_game import GuessGame
 
 
 class MemoryGame:
     def __init__(self, difficulty):
         self.difficulty = int(difficulty)
 
+    @staticmethod
+    def generate_number(start=1, end=101):
+        return randint(start, end)
+
     def generate_sequence(self) -> list:
-        return [GuessGame.generate_number() for i in range(self.difficulty)]
+        return [self.generate_number() for i in range(self.difficulty)]
 
     def get_list_from_user(self) -> list:
         print(f"Enter the numbers you have seen, separated by ENTER: ")

@@ -6,6 +6,7 @@ from random import randint
 class GuessGame:
     def __init__(self, difficulty):
         self.difficulty = int(difficulty)
+        self.secret_number = 0
 
     @staticmethod
     def generate_number(start=1, end=101):
@@ -21,5 +22,3 @@ class GuessGame:
     def play(self) -> bool:
         self.secret_number = self.generate_number(end=self.difficulty)
         return self.compare_results(self.get_guess_from_user())
-
-
